@@ -16,6 +16,7 @@ void load(std::string archive){
     }
   }
   std::cout <<  b;
+  infile.close();
 }
 #if UNIT_TESTING
 //This main is mainly for unit Testing, remove when compiling with header of file
