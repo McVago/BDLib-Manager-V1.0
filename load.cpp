@@ -1,6 +1,7 @@
 #include <fstream>
 #include <iostream>
 #define UNIT_TESTING true
+
 void load(std::string archive){
   std::ifstream infile;
   infile.open(archive, std::ifstream::in);
