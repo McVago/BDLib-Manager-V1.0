@@ -15,6 +15,7 @@ public:
 	int lenght();
 	void addfirst(ISBN isbn, string title, string autor,string year,int amount);
 	void addlast(ISBN isbn, string title, string autor,string year,int amount);
+	void erase();
 	void lend(ISBN isbn);
 	bool empty();
 
