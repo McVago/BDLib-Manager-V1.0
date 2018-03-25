@@ -8,7 +8,6 @@ List::List(){first = NULL; last = NULL;}
 bool List::empty(){if (!first) return true;else return false;}
 
 void List::addfirst(ISBN isbn, string title, string autor,string year,int amount){
-    if()
    if (empty()){
      first = new Book(isbn,title,autor,year,amount);
      last = first;
@@ -30,14 +29,14 @@ void List::addlast(ISBN isbn, string title, string autor,string year,int amount)
 	}
 }
 void List::erase(ISBN isbn){
-  if(empty()){throw emptyerror}
+  if(empty()){throw "Empty list"}
   else{
     bookp temp = first;
     for (int i = 0; i<list.lenght(); i++){
         temp = temp->next;
         if(temp->ISBN == isbn){
           if (temp->amount != temp->total){
-            throw lenderror;
+            throw "Someone has the book";
           }
         }
 
@@ -62,7 +61,7 @@ int List::lenght(){
 }
 void List::lend(ISBN isbn){
   bool could = false;
-  if (empty()){throw emptyerror}
+  if (empty()){throw "Empty list"}
   else{
     bookp aux = first;
     while(aux){
@@ -73,6 +72,6 @@ void List::lend(ISBN isbn){
       }
       aux = aux->next;
     }
-    if(!could){throw notfound;}
+    if(!could){throw "Book not found";}
   }
 }

@@ -9,6 +9,5 @@ using namespace std;
   }
   void Book::lend(){
     if (amount != 0) amount--;
-    else throw amountException;
+    else throw "All books are occupied";
   }
-
